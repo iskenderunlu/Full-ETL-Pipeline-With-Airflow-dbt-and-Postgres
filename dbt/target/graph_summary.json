@@ -1,0 +1,1 @@
+{"_invocation_id": "8115db09-329c-4b1f-a21a-23292e0b21db", "linked": {"0": {"name": "model.etl_dbt_project.transform_data", "type": "model"}, "1": {"name": "seed.etl_dbt_project.raw_data", "type": "seed", "succ": [0]}}}

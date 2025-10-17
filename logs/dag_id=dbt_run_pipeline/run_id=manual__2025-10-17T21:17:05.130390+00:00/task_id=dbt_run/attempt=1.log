@@ -1,0 +1,31 @@
+[2025-10-17T21:17:18.989+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_run_pipeline.dbt_run manual__2025-10-17T21:17:05.130390+00:00 [queued]>
+[2025-10-17T21:17:18.997+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_run_pipeline.dbt_run manual__2025-10-17T21:17:05.130390+00:00 [queued]>
+[2025-10-17T21:17:18.998+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2025-10-17T21:17:19.009+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): dbt_run> on 2025-10-17 21:17:05.130390+00:00
+[2025-10-17T21:17:19.013+0000] {standard_task_runner.py:57} INFO - Started process 204 to run task
+[2025-10-17T21:17:19.016+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dbt_run_pipeline', 'dbt_run', 'manual__2025-10-17T21:17:05.130390+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/dbt_dag.py', '--cfg-path', '/tmp/tmpvzu7qbp5']
+[2025-10-17T21:17:19.020+0000] {standard_task_runner.py:85} INFO - Job 30: Subtask dbt_run
+[2025-10-17T21:17:19.035+0000] {logging_mixin.py:151} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-10-17T21:17:19.073+0000] {task_command.py:415} INFO - Running <TaskInstance: dbt_run_pipeline.dbt_run manual__2025-10-17T21:17:05.130390+00:00 [running]> on host 10529ec04042
+[2025-10-17T21:17:19.145+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dbt_run_pipeline' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2025-10-17T21:17:05.130390+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-17T21:17:05.130390+00:00'
+[2025-10-17T21:17:19.147+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-10-17T21:17:19.148+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /opt/***/dbt && dbt run --profiles-dir /opt/***/dbt']
+[2025-10-17T21:17:19.156+0000] {subprocess.py:86} INFO - Output:
+[2025-10-17T21:17:21.845+0000] {subprocess.py:93} INFO - [0m21:17:21  Running with dbt=1.7.0
+[2025-10-17T21:17:22.179+0000] {subprocess.py:93} INFO - [0m21:17:22  Registered adapter: postgres=1.7.0
+[2025-10-17T21:17:22.247+0000] {subprocess.py:93} INFO - [0m21:17:22  Found 1 model, 1 seed, 0 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+[2025-10-17T21:17:22.251+0000] {subprocess.py:93} INFO - [0m21:17:22
+[2025-10-17T21:17:22.381+0000] {subprocess.py:93} INFO - [0m21:17:22  Concurrency: 1 threads (target='dev')
+[2025-10-17T21:17:22.382+0000] {subprocess.py:93} INFO - [0m21:17:22
+[2025-10-17T21:17:22.392+0000] {subprocess.py:93} INFO - [0m21:17:22  1 of 1 START sql table model public_public.transform_data ...................... [RUN]
+[2025-10-17T21:17:22.556+0000] {subprocess.py:93} INFO - [0m21:17:22  1 of 1 OK created sql table model public_public.transform_data ................. [[32mSELECT 3[0m in 0.16s]
+[2025-10-17T21:17:22.578+0000] {subprocess.py:93} INFO - [0m21:17:22
+[2025-10-17T21:17:22.579+0000] {subprocess.py:93} INFO - [0m21:17:22  Finished running 1 table model in 0 hours 0 minutes and 0.33 seconds (0.33s).
+[2025-10-17T21:17:22.594+0000] {subprocess.py:93} INFO - [0m21:17:22
+[2025-10-17T21:17:22.595+0000] {subprocess.py:93} INFO - [0m21:17:22  [32mCompleted successfully[0m
+[2025-10-17T21:17:22.596+0000] {subprocess.py:93} INFO - [0m21:17:22
+[2025-10-17T21:17:22.597+0000] {subprocess.py:93} INFO - [0m21:17:22  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2025-10-17T21:17:23.421+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-10-17T21:17:23.448+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=dbt_run_pipeline, task_id=dbt_run, execution_date=20251017T211705, start_date=20251017T211718, end_date=20251017T211723
+[2025-10-17T21:17:23.464+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-17T21:17:23.487+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check
